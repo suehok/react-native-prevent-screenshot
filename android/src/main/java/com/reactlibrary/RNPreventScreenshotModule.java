@@ -1,6 +1,8 @@
 
 package com.reactlibrary;
 
+import android.view.WindowManager;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -21,12 +23,12 @@ public class RNPreventScreenshotModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void enabled(Bool _enable) {
-      if(_enabled){
-          getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+  public void enabled(boolean _enable) {
+      if(_enable){
+          this.reactContext.getCurrentActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 
       } else {
-          getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
+          this.reactContext.getCurrentActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
       }
     }
 

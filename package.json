@@ -1,7 +1,7 @@
 {
   "name": "react-native-prevent-screenshot",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Getting started",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,10 +9,18 @@
   "keywords": [
     "react-native"
   ],
-  "author": "",
-  "license": "",
+  "author": "Ching Sue Hok",
+  "license": "ISC",
   "peerDependencies": {
     "react-native": "^0.41.2",
     "react-native-windows": "0.41.0-rc.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suehok/react-native-prevent-screenshot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/suehok/react-native-prevent-screenshot/issues"
+  },
+  "homepage": "https://github.com/suehok/react-native-prevent-screenshot#readme"
 }

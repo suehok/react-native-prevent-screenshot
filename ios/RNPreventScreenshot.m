@@ -1,7 +1,11 @@
 
 #import "RNPreventScreenshot.h"
+#import "UIImage+ImageEffects.h"
 
-@implementation RNPreventScreenshot
+@implementation RNPreventScreenshot {
+    BOOL enabled;
+    UIImageView *obfuscatingView;
+}
 
 - (dispatch_queue_t)methodQueue
 {
@@ -15,7 +19,7 @@ RCT_EXPORT_MODULE();
     if ((self = [super init])) {
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(handleAppStateResignActive)
-                                                     name:UIApplicationWillResignActiveNotification
+                                                    name:UIApplicationWillResignActiveNotification
                                                    object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(handleAppStateActive)
